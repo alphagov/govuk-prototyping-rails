@@ -2,6 +2,20 @@
 
 A lightweight rails prototyping kit for pages GOV.UK, not including services.
 
+## Installing
+
+Clone the repo, switch into the directory and install dependencies with:
+
+```
+bundle install
+```
+
+## Running
+
+```
+bundle exec rails s
+```
+
 ## Why another prototyping kit?
 
 Most are node, which can't make use of shared templates and GOV.UK components
@@ -21,8 +35,6 @@ and can be difficult to install.
 
 ## Todo
 
-2. Remove as much cruft as possible
-3. Document installation and running
 4. Setup default route, introduction, docs
 5. Include slimmer and GOV.UK styling
 6. Document running against Static (default, and local)
