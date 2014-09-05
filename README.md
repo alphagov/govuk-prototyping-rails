@@ -18,3 +18,13 @@ and can be difficult to install.
 * Easy to install and run
 * Small codebase thats understandable and extendable
 
+
+## Todo
+
+2. Remove as much cruft as possible
+3. Document installation and running
+4. Setup default route, introduction, docs
+5. Include slimmer and GOV.UK styling
+6. Document running against Static (default, and local)
+6. Setup simple prototyping routes
+7. Build short terxt format prototype
