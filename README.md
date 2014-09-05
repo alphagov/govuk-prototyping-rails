@@ -35,8 +35,8 @@ and can be difficult to install.
 
 ## Todo
 
-4. Setup default route, introduction, docs
 5. Include slimmer and GOV.UK styling
 6. Document running against Static (default, and local)
 6. Setup simple prototyping routes
-7. Build short terxt format prototype
+7. Build short text format prototype
+8. Document prototyping usage
