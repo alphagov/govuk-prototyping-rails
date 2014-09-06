@@ -10,3 +10,6 @@ gem 'sass-rails', '~> 4.0.3'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+gem 'slimmer', '5.0.0'
+gem 'govuk_frontend_toolkit', '1.5.0'

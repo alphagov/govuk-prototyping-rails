@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GovukPrototypingRails</title>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= yield :title %> - GOV.UK</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+    <%= yield :head %>
+  </head>
+  <body>
 
-<%= yield %>
+  <div id="wrapper">
+    <%= yield %>
+  </div>
 
-</body>
+  </body>
 </html>

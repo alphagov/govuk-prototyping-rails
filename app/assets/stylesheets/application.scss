@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import "helpers/grid";
+
+#wrapper {
+  @include grid-container;
+}
+
+.report-a-problem-toggle-wrapper {
+
+  margin-top: 60px;
+  @include grid-outdent;
+}

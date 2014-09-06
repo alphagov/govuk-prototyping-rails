@@ -12,8 +12,20 @@ bundle install
 
 ## Running
 
+This app needs to fetch templates from an instance of [alphagov/static](https://github.com/alphagov/static).
+
+You can use the live version, like this:
+
+
 ```
-bundle exec rails s
+PLEK_SERVICE_STATIC_URI=assets.digital.cabinet-office.gov.uk bundle exec rails s
+```
+
+Or to run against a local verison of static, switch `PLEK_SERVICE_STATIC_URI` to the
+the host of local instance, usually something like:
+
+```
+PLEK_SERVICE_STATIC_URI=0.0.0.0:3013 bundle exec rails s
 ```
 
 ## Why another prototyping kit?
@@ -35,8 +47,6 @@ and can be difficult to install.
 
 ## Todo
 
-5. Include slimmer and GOV.UK styling
-6. Document running against Static (default, and local)
 6. Setup simple prototyping routes
 7. Build short text format prototype
 8. Document prototyping usage
