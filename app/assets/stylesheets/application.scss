@@ -23,3 +23,21 @@
 // Changes to the defaults of external SCSS (govuk_template, static)
 // Keep separate from application SCSS to self-document and for easy removal
 @import "overrides/*";
+
+
+.grid-row {
+  @extend %grid-row;
+}
+
+// This should go in a module file, not with application SCSS, probably
+main {
+  @include grid-column(2/3);
+}
+
+aside {
+  @include grid-column(1/3);
+
+  .sidebar {
+    border-top: 10px solid #005ea5;
+  }
+}

@@ -1,0 +1,51 @@
+<div class="grid-row">
+  <main id="x-content" role="main" class="smart-answer">
+    <%= render partial: 'prototype_component/page_title', locals: {
+      title: "Register a birth abroad"
+    } %>
+
+    <div class="" data-step="employment-status">
+      <form accept-charset="UTF-8" action="/outcome" method="get">
+        <div class="current-question" id="current-question">
+          <div class="question">
+            <h2>Who has British nationality?</h2>
+
+            <p>If the British parent was born abroad, they may be a British citizen ‘by descent’. This means they may not be allowed to pass on their British nationality to a child also born abroad. <a href="/check-british-citizen">Check if the parent is a British citizen</a>.</p>
+
+            <ul class="options">
+            <li>
+              <label for="response_0" class="selectable">
+                <input id="response_0" name="response" type="radio" value="mother">
+                Mother only
+              </label>
+            </li>
+            <li>
+              <label for="response_1" class="selectable">
+                <input id="response_1" name="response" type="radio" value="father">
+                Father only
+              </label>
+            </li>
+            <li>
+              <label for="response_2" class="selectable">
+                <input id="response_2" name="response" type="radio" value="mother_and_father">
+                Mother and father
+              </label>
+            </li>
+            <li>
+              <label for="response_3" class="selectable">
+                <input id="response_3" name="response" type="radio" value="neither">
+                Neither
+              </label>
+            </li>
+            </ul>
+          </div>
+
+          <div class="next-question">
+            <input type="hidden" name="next" value="1"><button type="submit" class=
+            "medium button">Next step</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>

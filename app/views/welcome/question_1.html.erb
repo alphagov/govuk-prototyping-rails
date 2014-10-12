@@ -1,0 +1,28 @@
+<div class="grid-row">
+  <main id="x-content" role="main" class="smart-answer">
+    <%= render partial: 'prototype_component/page_title', locals: {
+      title: "Register a birth abroad"
+    } %>
+
+    <div class="" data-step="employment-status">
+      <form accept-charset="UTF-8" action="question_2" method="get">
+        <div class="current-question" id="current-question">
+          <div class="question">
+            <h2>Which country was the child born in?</h2>
+
+            <div class="question-body">
+              <select id="response" name="response">
+                <option value="afghanistan">Afghanistan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="next-question">
+            <input type="hidden" name="next" value="1"><button type="submit" class=
+            "medium button">Next step</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
