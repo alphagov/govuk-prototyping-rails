@@ -14,12 +14,13 @@ bundle install
 
 This app needs to fetch templates from an instance of [alphagov/static](https://github.com/alphagov/static).
 
-You can use the live version, like this:
-
+If you use the startup script it will run the rails server and default to the live/production version of static used by GOV.UK:
 
 ```
-PLEK_SERVICE_STATIC_URI=assets.digital.cabinet-office.gov.uk bundle exec rails s
+./startup.sh
 ```
+
+### Using a different static
 
 Or to run against a local verison of static, switch `PLEK_SERVICE_STATIC_URI` to the
 the host of local instance, usually something like:
