@@ -14,14 +14,12 @@
  *= require_self
  */
 
-@import "helpers/grid";
+@import "grid_layout";
 
 #wrapper {
-  @include grid-container;
+  @extend %site-width-container;
 }
 
-.report-a-problem-toggle-wrapper {
-
-  margin-top: 60px;
-  @include grid-outdent;
-}
+// Changes to the defaults of external SCSS (govuk_template, static)
+// Keep separate from application SCSS to self-document and for easy removal
+@import "overrides/*";
