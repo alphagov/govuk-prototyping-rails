@@ -15,5 +15,5 @@ gem 'jquery-rails'
 gem 'spring',        group: :development
 gem 'better_errors', '1.1.0', group: :development
 
-gem 'slimmer', '5.0.0'
-gem 'govuk_frontend_toolkit', '1.7.0'
+gem 'slimmer', '5.0.1'
+gem 'govuk_frontend_toolkit', '3.1.0'
