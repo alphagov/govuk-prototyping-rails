@@ -14,12 +14,3 @@
  *= require_self
  */
 
-@import "grid_layout";
-
-#wrapper {
-  @extend %site-width-container;
-}
-
-// Changes to the defaults of external SCSS (govuk_template, static)
-// Keep separate from application SCSS to self-document and for easy removal
-@import "overrides/*";
