@@ -1,11 +1,11 @@
 <% content_for :title, "Prototyping" %>
 
-<h1>GOV.UK Prototyping app</h1>
-<p>Another one.</p>
+<%= render partial: 'govuk_component/title', locals: {
+  :title => "GOV.UK Prototyping app"
+} %>
+
 <p>This app is for protoyping GOV.UK itself (mainstream, whitehall, etc), not services.</p>
 
 <p>It stays in sync with GOV.UK by pulling it's templates from GOV.UK itself.</p>
 
-<%= render partial: 'prototype_component/example' %>
-
-
+<p>It builds on the new <a href="https://github.com/alphagov/static/blob/master/app/views/root/core_layout.html.erb">core-layout</a> and <a href="http://govuk-component-guide.herokuapp.com/">GOV.UK Components</a></p>
