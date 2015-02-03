@@ -1,3 +1,40 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "grid_layout";
+
+.row {
+  @extend %grid-row;
+
+  .col {
+    @include grid-column(1/3);
+  }
+}
+
+.component {
+  @extend %grid-row;
+
+  .year {
+    @include grid-column(1/6);
+  }
+
+  .updates {
+    @include grid-column(5/6);
+    list-style: none;
+    margin-top: 0;
+
+    li {
+      @extend %grid-row;
+      $col-ratio: 5/6;
+
+      h4 {
+        @include grid-column((1/6) / $col-ratio);
+      }
+
+      .update {
+        @include grid-column((4/6) / $col-ratio);
+      }
+    }
+  }
+}
