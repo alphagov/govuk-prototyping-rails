@@ -1,0 +1,27 @@
+<% content_for :title, "Content: @content_item.title" %>
+
+<%= render partial: 'govuk_component/title', locals: {
+  :context => "Content Item",
+  :title => @content_item.title
+} %>
+
+<%= render partial: 'govuk_component/metadata', locals: {
+  other: {
+    "Updated at" => @content_item.public_updated_at,
+    "Format" => @content_item.format,
+    "Locale" => @content_item.locale,
+    "Phase" => @content_item.phase || "Live"
+  }
+} %>
+
+<hr>
+
+<p class="description"><%= @content_item.description %></p>
+
+<hr>
+
+<% if @content_item.details.body %>
+  <%= render partial: 'govuk_component/govspeak', locals: {
+    content: @content_item.details.body
+  } %>
+<% end %>

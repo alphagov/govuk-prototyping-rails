@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'content-items' => "content_items#index"
+  get 'content-items/*path' => "content_items#show"
+
   get 'error/:code' => 'error#code'
 
   # The priority is based upon order of creation: first created -> highest priority.

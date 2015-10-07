@@ -17,3 +17,4 @@ gem 'better_errors', '1.1.0', group: :development
 
 gem 'slimmer', '9.0.0'
 gem 'govuk_frontend_toolkit', '4.3.0'
+gem 'gds-api-adapters', '24.4.0'
