@@ -7,27 +7,27 @@ A lightweight rails prototyping kit for pages GOV.UK, not including services.
 Clone the repo, switch into the directory and install dependencies with:
 
 ```
-bundle install
+$ bundle install
 ```
 
 ## Running
 
-This app needs to fetch templates from an instance of [alphagov/static](https://github.com/alphagov/static).
-
-If you use the startup script it will run the rails server and default to the live/production version of static used by GOV.UK:
-
 ```
-./startup.sh
+$ ./startup.sh
 ```
 
-### Using a different static
+### Running offline
 
-Or to run against a local verison of static, switch `PLEK_SERVICE_STATIC_URI` to the
-the host of local instance, usually something like:
+This app uses the public version of `static` for shared layouts and components, which
+means you need to be online to use it. If you want to run offline, see "[Using a different version of static](docs/docs/using-a-different-static.md)".
 
-```
-PLEK_SERVICE_STATIC_URI=0.0.0.0:3013 bundle exec rails s
-```
+### How to...
+
+This app should Just Work™ for the common use cases, but if you want to do something
+slightly unusual these guides should help.
+
+- [Use a different version of static](docs/using-a-different-static.md)
+- [Use dummy content store](docs/using-dummy-content-store.md)
 
 ## Why another prototyping kit?
 

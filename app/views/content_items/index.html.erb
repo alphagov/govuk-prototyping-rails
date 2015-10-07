@@ -1,0 +1,8 @@
+<% content_for :title, "Content Items" %>
+
+<%= render partial: 'govuk_component/title', locals: {
+  :context => "Content Items",
+  :title => "List of Examples"
+} %>
+
+<p>If you're running the dummy content store, then you can <a href="<%= @content_store_url %>">view a list of examples</a></p>
