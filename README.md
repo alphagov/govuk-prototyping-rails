@@ -28,6 +28,7 @@ slightly unusual these guides should help.
 
 - [Use a different version of static](docs/using-a-different-static.md)
 - [Use dummy content store](docs/using-dummy-content-store.md)
+- [Use content items](docs/using-content-items.md)
 
 ## Why another prototyping kit?
 
