@@ -41,7 +41,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.2.1)
-    gds-api-adapters (24.4.0)
+    gds-api-adapters (24.5.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -145,7 +145,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors (= 1.1.0)
   binding_of_caller (= 0.7.2)
-  gds-api-adapters (= 24.4.0)
+  gds-api-adapters (= 24.5.0)
   govuk_frontend_toolkit (= 4.3.0)
   jquery-rails
   rails (= 4.1.4)

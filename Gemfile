@@ -18,4 +18,4 @@ gem 'binding_of_caller', '0.7.2', group: :development
 
 gem 'slimmer', '9.0.0'
 gem 'govuk_frontend_toolkit', '4.3.0'
-gem 'gds-api-adapters', '24.4.0'
+gem 'gds-api-adapters', '24.5.0'
