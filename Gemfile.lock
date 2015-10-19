@@ -32,8 +32,11 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     coderay (1.1.0)
+    debug_inspector (0.0.2)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
@@ -141,6 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (= 1.1.0)
+  binding_of_caller (= 0.7.2)
   gds-api-adapters (= 24.4.0)
   govuk_frontend_toolkit (= 4.3.0)
   jquery-rails
