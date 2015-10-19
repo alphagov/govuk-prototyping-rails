@@ -1,0 +1,11 @@
+// Place all the styles related to the LocalTransactions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "typography";
+@import "measurements";
+
+h2 {
+  @include bold-24;
+  margin: $gutter 0 $gutter-half 0;
+}

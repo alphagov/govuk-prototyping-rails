@@ -1,0 +1,77 @@
+<% content_for :title, @content_item.title %>
+<% content_for :description, @content_item.description %>
+
+<% content_for :body_class, @content_item.format %>
+
+<%= render partial: 'govuk_component/breadcrumbs', locals: {
+  sections: [
+    {
+      title: "Housing and local services",
+      url: "/browse/housing-local-services"
+    },
+    {
+      title: "Council Tax",
+      url: "/browse/housing-local-services/council-tax"
+    }
+  ]
+} %>
+
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render partial: 'govuk_component/title', locals: {
+      title: @content_item.title
+    } %>
+
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.details.introduction
+    %>
+
+    <h2>Local Authorities</h2>
+
+    <ol>
+    <% @content_item.details.authorities.each do |authority| %>
+      <li>
+        <h3>
+          <a href="<%= authority.urls.interaction %>">
+            <%= authority.name %> (<%= authority.slug %> / <%= authority.gss_code %>)
+          </a>
+        </h3>
+      </li>
+    <% end %>
+    </ol>
+
+
+    <% if @content_item.details.need_to_know %>
+      <h2>What you need to know</h2>
+      <%= render 'govuk_component/govspeak',
+          content: @content_item.details.need_to_know
+      %>
+    <% end %>
+  </div>
+
+  <div class="column-third" style="margin-top: 40px;">
+    <%= render partial: 'govuk_component/related_items', locals: {
+    sections: [
+      {
+        title: "Council Tax",
+        url: "/browse/housing-local-services/council-tax",
+        items: [
+          {
+            title: 'Council Tax',
+            url: '/council-tax'
+          },
+          {
+            title: 'Council Tax',
+            url: '/council-tax-bands'
+          },
+          {
+            title: 'Apply for Council Tax Reduction',
+            url: '/apply-council-tax-reduction'
+          }
+        ]
+      }
+    ]
+  } %>
+  </div>
+</div>

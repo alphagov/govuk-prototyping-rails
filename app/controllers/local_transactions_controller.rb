@@ -1,0 +1,2 @@
+class LocalTransactionsController < ContentItemsController
+end
