@@ -1,6 +1,8 @@
 <% content_for :title, "Content: @content_item.title" %>
 <% content_for :description, @content_item.description %>
 
+<% content_for :body_class, @content_item.format %>
+
 <%= render partial: 'govuk_component/title', locals: {
   :context => "Content Item",
   :title => @content_item.title
