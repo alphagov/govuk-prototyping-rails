@@ -1,6 +1,7 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
+  rescue_from GdsApi::HTTPForbidden, with: :error_403
   before_filter :load_content_item, :only => :show
 
   def index
