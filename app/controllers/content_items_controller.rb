@@ -14,11 +14,26 @@ class ContentItemsController < ApplicationController
 protected
 
   def load_content_item
-    if content_item = content_store.content_item(content_item_path)
+    if content_item = fetch_content_item(content_item_path)
       @content_item = content_item
     else
       render text: 'Not found', status: :not_found
     end
+  end
+
+  def fetch_content_item(path)
+    if path == '/local-content-item'
+      fetch_local_content_item
+    else
+      content_store.content_item(path)
+    end
+  end
+
+  def fetch_local_content_item
+    fake_response = OpenStruct.new({
+      body: File.read('local-content-item.json')
+    })
+    GdsApi::Response.new(fake_response)
   end
 
   def content_item_path
