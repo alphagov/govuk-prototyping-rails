@@ -4,8 +4,33 @@
 
 @import "typography";
 @import "measurements";
+@import "design-patterns/buttons";
+
 
 h2 {
   @include bold-24;
   margin: $gutter 0 $gutter-half 0;
+}
+
+
+.button {
+  @include button;
+
+  &.big {
+    @include core-19;
+  }
+}
+
+ol.authorities {
+  margin-left: 30px;
+
+  li {
+    @include core-19;
+    margin: 10px 0;
+  }
+}
+
+
+section.more {
+  margin-top: 60px;
 }

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'local-transactions/:path' => "local_transactions#show"
+  get 'local-transactions/:path(/:authority)' => "local_transactions#show"
 
   get 'content-items' => "content_items#index"
   get 'content-items/*path' => "content_items#show"

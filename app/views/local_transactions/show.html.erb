@@ -27,27 +27,56 @@
         content: @content_item.details.introduction
     %>
 
-    <h2>Local Authorities</h2>
+    <% if @authority %>
 
-    <ol>
-    <% @content_item.details.authorities.each do |authority| %>
-      <li>
-        <h3>
-          <a href="<%= authority.urls.interaction %>">
-            <%= authority.name %> (<%= authority.slug %> / <%= authority.gss_code %>)
-          </a>
-        </h3>
-      </li>
+      <h2>
+        <%= @authority.name %>
+        <small>(<a href="/local-transactions<%= @content_item.base_path %>">change location</a>)</small>
+      </h2>
+      <% if @authority.interaction %>
+        <a href="<%= @authority.interaction.url %>" class="button big">Start Now</a>
+      <% else %>
+        <p>We don't have a direct link to this service from <%= @authority.name %><% if @authority.contact.url.present? %>, but you could try the <%= link_to @authority.name + " website", @authority.contact.url, :rel => :external %><% end %>.</p>
+        <% if @authority.contact.address %>
+          <div class="adr"><%= simple_format @authority.contact.address.join("\n") %></div>
+        <% end %>
+        <% if @authority.contact.phone.present? %>
+          <p class="tel"><strong>Telephone:</strong> <span class="value"><%= @authority.contact.phone %></span></p>
+        <% end %>
+      <% end %>
+
+    <% else %>
+
+      <h2>Choose your local authority</h2>
+
+      <ol class="authorities">
+      <% @content_item.details.authorities.each do |authority| %>
+        <li>
+          <h3>
+            <a href="/local-transactions<%= @content_item.base_path + '/' + authority.slug %>">
+              <%= authority.name %>
+            </a>
+          </h3>
+        </li>
+      <% end %>
+      </ol>
+
     <% end %>
-    </ol>
 
-
-    <% if @content_item.details.need_to_know %>
-      <h2>What you need to know</h2>
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.details.need_to_know
-      %>
+    <section class="more">
+      <% if @content_item.details.need_to_know %>
+        <h2>What you need to know</h2>
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.details.need_to_know
+        %>
     <% end %>
+    <br>
+    <% if @content_item.details.more_information %>
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.details.more_information
+        %>
+    <% end %>
+  </section>
   </div>
 
   <div class="column-third" style="margin-top: 40px;">
@@ -62,7 +91,7 @@
             url: '/council-tax'
           },
           {
-            title: 'Council Tax',
+            title: 'Council Tax Bands',
             url: '/council-tax-bands'
           },
           {
